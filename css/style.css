@@ -1,0 +1,467 @@
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+#header h1 {
+    position: fixed;
+    top: 80px;
+    left: 100px;
+    z-index: 999;
+
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Red Hat Display";
+    color: #444;
+}
+
+#header .gnb {
+    position: fixed;
+    top: 50%;
+    left: 100px;
+    transform: translate(0, -50%);
+    z-index: 999;
+}
+
+#header .gnb li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 24px;
+    font-size: 0;
+}
+
+#header .gnb li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(to left, #b8b4b0 0%, #304352 100%);
+    filter: blur(1px);
+    transition: 0.4s;
+}
+
+#header .gnb li.on a::before {
+    width: 56px;
+    background: linear-gradient(to left, #b8b4b0 0%, #304352 100%);
+    filter: blur(0);
+}
+
+#header .menu {
+    position: fixed;
+    top: 80px;
+    right: 100px;
+    width: 32px;
+    height: 32px;
+    z-index: 999;
+
+    cursor: pointer;
+}
+
+#header .menu button {
+    font-size: 0;
+}
+
+#header .menu button::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    right: 4px;
+
+    height: 2px;
+    background: #444;
+}
+
+#header .menu.on button::before {
+    display: none;
+}
+
+#header .menu button::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 4px;
+    right: 4px;
+
+    height: 2px;
+    background: #444;
+}
+
+#header .menu.on button::after {
+    display: none;
+}
+
+#header .menu button span::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 4px;
+    right: 4px;
+
+    height: 2px;
+    background: #444;
+
+}
+
+#header .menu.on button span::before {
+    transform: rotate(45deg);
+}
+
+#header .menu button span::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 4px;
+    right: 4px;
+
+    height: 2px;
+    background: #444;
+
+}
+
+#header .menu.on button span::after {
+    transform: rotate(-45deg);
+}
+
+#header .cover {
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 998;
+    background: #212121;
+
+    font-family: "Red Hat Display";
+    font-size: 40px;
+    line-height: 64px;
+    font-weight: 900;
+    color: #444;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .cover ul>li>a {
+    position: relative;
+}
+
+#header .cover ul>li>a::before {
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+
+#header .cover.on {
+    display: flex;
+}
+
+/* 인트로시작 */
+
+.intro {
+    position: relative;
+}
+
+/* 
+.intro::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    content: "";
+    height: 600px;
+    width: 600px;
+    background: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(80px);
+}
+
+.intro::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    content: "";
+    height: 600px;
+    width: 600px;
+    background: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(80px);
+} */
+
+.intro .inner {}
+
+.intro .inner .tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+}
+
+.intro .inner .tit h2 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 64px;
+    line-height: 88px;
+    font-family: "Meddon";
+    font-weight: 400;
+
+    background: linear-gradient(to left, #b8b4b0 0%, #304352 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 2px #b8b4b0);
+    text-align: center;
+    white-space: nowrap;
+
+    padding: 0 0 16px 0;
+}
+
+.intro .inner .tit h2::after {
+    content: "in every line";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 1;
+}
+
+.intro .inner .tit .line {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 160px;
+    background: linear-gradient(to left, #d7d2cc 0%, #304352 100%);
+    filter: blur(1px);
+}
+
+.intro .eq {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewy(-135deg);
+    z-index: 0;
+}
+
+.intro .eq svg {
+    width: 400px;
+    fill: none;
+    stroke: rgba(215, 210, 204, 0.5);
+    stroke-width: 0.5px;
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 5px;
+    overflow: visible;
+
+    animation: c 4s infinite linear;
+}
+
+
+@keyframes c {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.intro .inner .tit p {
+    color: #212121;
+    font-weight: 200;
+    letter-spacing: -1.6px;
+    text-align: right;
+}
+
+.intro .inner .txt {
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+}
+
+.intro .inner .txt p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #888;
+    letter-spacing: -0.5px;
+}
+
+.intro .inner .scroll {
+    position: absolute;
+    bottom: 80px;
+    left: 120px;
+
+    color: #fff;
+}
+
+/* 인트로 끝 */
+
+
+.pf .inner {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.pf .inner .fo {
+    order: -1;
+}
+
+.pf .desc_area {
+    flex: 1;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.pf.on .desc_area {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.7s;
+}
+
+.pf .desc_area .tit {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.pf .desc_area .tit::before {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    content: "";
+    width: 330px;
+    height: 1px;
+    background: rgba(221, 221, 221, 0.2);
+}
+
+.pf .desc_area .tit h2 {
+    font-size: 48px;
+    line-height: 48px;
+    color: #fff;
+    font-family: "Red Hat Display";
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+.pf .desc_area .tit span {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pf .desc_area .desc {
+    margin-bottom: 24px;
+}
+
+.pf .desc_area .desc p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+
+    margin-bottom: 24px;
+}
+
+.pf .desc_area .desc table th {
+    height: 24px;
+    text-align: left;
+
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #fff;
+    font-family: "Red Hat Display";
+}
+
+.pf .desc_area .desc table td {
+    height: 24px;
+}
+
+.pf .img_area {
+    flex: 2;
+    opacity: 0;
+    transform: translate(0, -100px);
+}
+
+.pf.on .img_area {
+    flex: 2;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 1.2s;
+}
+
+.pf .inner .img_box {
+    height: 432px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.pf01 .inner .img_box {
+    outline: 8px solid #111;
+}
+
+.pf02 .inner .img_box {
+    outline: 8px solid #ddd;
+}
+
+.pf03 .inner .img_box {
+    outline: 8px solid #89A58D;
+}
+
+.pf .inner .lnk {
+    display: flex;
+    gap: 8px;
+}
+
+.pf .btn {
+    display: inline-block;
+    background: #333;
+    padding: 12px 24px;
+    width: 120px;
+    border-radius: 12px;
+
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Red Hat Display";
+}
+
+/* 
+.pf {
+    position: relative;
+    overflow: hidden;
+}
+
+.pf .inner::before {
+    position: absolute;
+    top: -110px;
+    left: -250px;
+
+    content: "";
+    width: 1200px;
+    height: 1200px;
+    background: rgba(34, 34, 34, 0.9);
+    border-radius: 50%;
+    filter: blur(30px);
+} */
